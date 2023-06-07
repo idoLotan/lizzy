@@ -1,4 +1,4 @@
-const svg = document.querySelectorAll("svg");
+const svg = document.querySelectorAll("#tool-bar-btn");
 
 svg.forEach((button) => {
   button.addEventListener("click", function () {
@@ -14,12 +14,12 @@ svg.forEach((button) => {
   });
 });
 
-const extand = document.getElementById("extand");
+const extand = document.getElementsByName("open-btn");
 const toolBar = document.getElementById("tool-bar");
 const arrowIcon = document.getElementById("arrow-icon");
 extand.addEventListener("click", function (event) {
-  toolBar.classList.remove("w-[294px]");
-  toolBar.classList.add("w-[818px]"); // Remove the background color class
+  toolBar.classList.remove("w-72");
+  toolBar.classList.add("max-w-4xl"); // Remove the background color class
   arrowIcon.classList.remove("fill-[#ABABAC]");
   arrowIcon.classList.add("fill-[#25A7FF]");
 });
